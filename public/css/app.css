@@ -1,0 +1,39 @@
+/* app css stylesheet */
+
+body {
+  padding-top: 20px;
+}
+
+.rowstyle {
+    width: 100%;
+    height: 16px;
+    background-color: red;
+}
+
+.column0 {
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    background-color: white;
+}
+
+.column1 {
+    float: left;
+    width: 16px;
+    height: 16px;
+	margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    background-color: black;
+}
+
+.startButton {
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+}

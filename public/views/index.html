@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" ng-app="gameOfLife">
+<head>
+  <meta charset="utf-8">
+  <title>Game Of Life Simulation</title>
+  <link rel="stylesheet" href="public/css/app.css">
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+  <script src="public/js/controllers.js"></script>
+</head>
+<body ng-controller="GameCtrl">
+<div ng-model="debug">
+  {{debug.text}}
+</div>
+<div ng-model="counter">
+  {{counter}}
+</div>
+<div>
+  <div class="rowstyle" ng-repeat="row in grid">
+    <div ng-repeat="c in row track by $index" class="column{{c}}" ng-click="foo(row, $index)">
+    </div>
+  </div>
+</div>
+<div class="startButton" ng-click="start()">
+</div>
+
+</body>
+</html>
