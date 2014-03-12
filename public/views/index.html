@@ -1,27 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" ng-app="gameOfLife">
 <head>
   <meta charset="utf-8">
   <title>Game Of Life Simulation</title>
   <link rel="stylesheet" href="public/css/app.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+  <script src="public/js/game.js"></script>
   <script src="public/js/controllers.js"></script>
 </head>
 <body ng-controller="GameCtrl">
-<div ng-model="debug">
-  {{debug.text}}
-</div>
-<div ng-model="counter">
-  {{counter}}
-</div>
+<p>
+<form>
+  <label for="width">Width</label>
+  <input type="number" ng-model="width" min="10" max="100" id="width" ngRequired />
+  <label for="height">Height</label>
+  <input type="number" ng-model="height" min="10" max="50" id="height" ngRequired />
+  <input class="btn btn-large btn-primary" type="submit" value="Initialize Game Board" ng-click="init()">
+  <input class="btn btn-large btn-primary" type="submit" ng-disabled="isDisabled" value="Start Game" ng-click="start()">
+  <input class="btn btn-large btn-primary" type="submit" ng-disabled="isDisabled" value="Stop Game" ng-click="stop()">
+</form>
+</p>
 <div>
   <div class="rowstyle" ng-repeat="row in grid">
     <div ng-repeat="c in row track by $index" class="column{{c}}" ng-click="foo(row, $index)">
     </div>
   </div>
 </div>
-<div class="startButton" ng-click="start()">
-</div>
-
 </body>
 </html>
